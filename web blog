@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trump Inauguration Analysis</title>
+    <style>
+        :root {
+            --primary-color: #2d3436;
+            --secondary-color: #636e72;
+            --accent-color: #0984e3;
+            --background-color: #f5f6fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: var(--primary-color);
+            background: var(--background-color);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .blog-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .blog-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-meta {
+            color: var(--secondary-color);
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        .blog-content {
+            margin-top: 2rem;
+        }
+
+        .blog-content h2 {
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            color: var(--primary-color);
+        }
+
+        .blog-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        blockquote {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: var(--secondary-color);
+        }
+
+        ul, ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .image-container {
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .image-container:hover img {
+            transform: scale(1.02);
+        }
+
+        .image-caption {
+            text-align: center;
+            color: var(--secondary-color);
+            font-style: italic;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .blog-title {
+                font-size: 2rem;
+            }
+
+            .blog-content h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="blog-header">
+            <h1 class="blog-title">The Trump Inauguration: A Historic Moment in American Politics</h1>
+            <div class="blog-meta">
+                <span class="author">By Jonathan Smith</span> |
+                <span class="date">January 20, 2017</span>
+            </div>
+        </header>
+
+        <article class="blog-content">
+            <div class="image-container">
+                <img src="https://www.whitehouse.gov/wp-content/uploads/2021/01/trump_inauguration_2017.jpg" alt="Donald Trump taking the oath of office">
+                <p class="image-caption">Donald Trump taking the oath of office as the 45th President of the United States</p>
+            </div>
+
+            <p>The inauguration of Donald J. Trump as the 45th President of the United States marked a significant turning point in American political history. This article examines the key moments and implications of this historic event.</p>
+
+            <h2>Key Highlights of the Ceremony</h2>
+            <ul>
+                <li>The oath of office administration by Chief Justice John Roberts</li>
+                <li>Trump's inaugural address focusing on "America First" policy</li>
+                <li>The presence of former presidents and dignitaries</li>
+                <li>The massive crowd gathering at the National Mall</li>
+            </ul>
+
+            <div class="image-container">
+                <img src="https://media.npr.org/assets/img/2017/01/20/trump-inauguration-address_wide-b168d85a7c0699c11a767e251e4e7bfac3a7c892-s1400-c100.jpg" alt="Trump delivering his inaugural address">
+                <p class="image-caption">President Trump delivering his inaugural address to the nation</p>
+            </div>
+
+            <blockquote>
+                "From this day forward, a new vision will govern our land. From this moment on, it's going to be America First." - Donald Trump
+            </blockquote>
+
+            <h2>Impact and Significance</h2>
+            <p>The inauguration represented more than just a transfer of power; it symbolized a dramatic shift in American political discourse and policy direction. The ceremony itself reflected the unconventional nature of Trump's presidency, breaking from many traditional aspects while maintaining core constitutional elements.</p>
+
+            <div class="image-container">
+                <img src="https://cdn.theatlantic.com/media/img/photo/2017/01/the-inauguration-of-president-donald/t01_RTX2Z31D/main_1500.jpg" alt="Aerial view of the inauguration crowd">
+                <p class="image-caption">Aerial view of the crowds gathered at the National Mall during the inauguration</p>
+            </div>
+
+            <h2>Public Response</h2>
+            <p>The event drew both strong support and significant protests, highlighting the divided nature of the American electorate. The contrasting reactions to the inauguration foreshadowed the political dynamics that would characterize the Trump presidency.</p>
+        </article>
+    </div>
+
+    <script>
+        // Add smooth scrolling to all headings and images
+        document.querySelectorAll('h2, .image-container').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'all 0.5s ease';
+        });
+
+        // Intersection Observer for fade-in effect
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('h2, .image-container').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>
